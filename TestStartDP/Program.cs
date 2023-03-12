@@ -22,6 +22,17 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 builder.Services.AddSingleton<WeatherForecastService>();
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminPolicy", policy =>
+        policy.RequireClaim("Admin"));
+    
+    options.AddPolicy("HRPolicy", policy =>
+        policy.RequireClaim("HR"));
+});
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
