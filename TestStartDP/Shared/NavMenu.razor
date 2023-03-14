@@ -33,18 +33,18 @@
         <Authorized>
                 <a href="Identity/Account/Manage">Hello, @context.User.Identity?.Name!</a>
                 <form method="post" action="Identity/Account/LogOut">
-                    <button type="submit" class="nav-link btn btn-link"><i class="oi-account-logout">Log out</i></button>
+                    <button type="submit" class="nav-link btn btn-link">Log out</button>
                 </form>
             </Authorized>
             <NotAuthorized>
                              <li class="nav-item">
                                  <NavLink class="nav-link" href="/Register">
-                    <span class="oi-person" aria-hidden="true"></span> Register
+                    <span class="oi oi-person" aria-hidden="true"></span> Register
                 </NavLink>
                                  </li>
                              <li class="nav-item">
                                  <NavLink class="nav-link" href="/Login">
-                    <span class="oi-account-login" aria-hidden="true"></span> Log in
+                    <span class="oi oi-account-login" aria-hidden="true"></span> Log in
                 </NavLink>
                                  </li>
             </NotAuthorized>
