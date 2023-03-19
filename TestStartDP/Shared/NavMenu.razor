@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/Login">Информационна система</a>
+        <a class="navbar-brand" href="/counter">Информационна система</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -13,12 +13,17 @@
                     <Authorized>
                         <li class="nav-item">
                             <NavLink class="nav-link" href="counter" Match="NavLinkMatch.All">
-                                <span class="oi oi-home" aria-hidden="true"></span> Home
+                                <span class="oi oi-home" aria-hidden="true"></span> Учебни материали
                             </NavLink>
                         </li>
                         <li class="nav-item">
                             <NavLink class="nav-link" href="fetchdata">
-                                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+                                <span class="oi oi-list-rich" aria-hidden="true"></span> Тестове
+                            </NavLink>
+                        </li>
+                        <li class="nav-item">
+                            <NavLink class="nav-link" href="neznam">
+                                <span class="oi oi-list-rich" aria-hidden="true"></span> Виртуални ученици
                             </NavLink>
                         </li>
                         <a href="Identity/Account/Manage">Hello, @context.User.Identity?.Name!</a>
