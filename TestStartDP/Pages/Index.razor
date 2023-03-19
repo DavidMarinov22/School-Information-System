@@ -1,0 +1,13 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Identity
+@inject NavigationManager NavManager
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+            NavManager.NavigateTo("/Login", true);
+            await base.OnInitializedAsync();
+        
+}
+}
