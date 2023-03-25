@@ -27,8 +27,8 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("AdminPolicy", policy =>
         policy.RequireClaim("Admin"));
     
-    options.AddPolicy("HRPolicy", policy =>
-        policy.RequireClaim("HR"));
+    options.AddPolicy("TeacherPolicy", policy =>
+        policy.RequireClaim("Teacher"));
 });
 
 
