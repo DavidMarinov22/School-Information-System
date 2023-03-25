@@ -9,7 +9,39 @@
         <CascadingAuthenticationState>
         <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
             <ul class="navbar-nav">
-                <AuthorizeView>
+                <AuthorizeView Roles="Admin">
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="adminpage">
+                            <span class="oi oi-list-rich" aria-hidden="true"></span> Admin page
+                        </NavLink>
+                    </li>
+                    <li class="nav-item">
+                            <NavLink class="nav-link" href="counter" Match="NavLinkMatch.All">
+                                <span class="oi oi-home" aria-hidden="true"></span> Учебни материали
+                            </NavLink>
+                        </li>
+                        <li class="nav-item">
+                            <NavLink class="nav-link" href="fetchdata">
+                                <span class="oi oi-list-rich" aria-hidden="true"></span> Мултимедия
+                            </NavLink>
+                        </li>
+                        <li class="nav-item">
+                            <NavLink class="nav-link" href="fetchdata">
+                                <span class="oi oi-list-rich" aria-hidden="true"></span> Тестове
+                            </NavLink>
+                        </li>
+                        
+                    <li class="nav-item">
+                        <NavLink class="nav-link" href="rolepage">
+                            <span class="oi oi-list-rich" aria-hidden="true"></span> Потребители
+                        </NavLink>
+                    </li>
+                    <a href="Identity/Account/Manage">Hello, @context.User.Identity?.Name!</a>
+                        <form method="post" action="Identity/Account/LogOut">
+                            <button type="submit" class="nav-link btn btn-link">Излез</button>
+                        </form>
+                </AuthorizeView>
+                <AuthorizeView Roles="User">
                     <Authorized>
                         <li class="nav-item">
                             <NavLink class="nav-link" href="counter" Match="NavLinkMatch.All">
@@ -18,9 +50,15 @@
                         </li>
                         <li class="nav-item">
                             <NavLink class="nav-link" href="fetchdata">
+                                <span class="oi oi-list-rich" aria-hidden="true"></span> Мултимедия
+                            </NavLink>
+                        </li>
+                        <li class="nav-item">
+                            <NavLink class="nav-link" href="fetchdata">
                                 <span class="oi oi-list-rich" aria-hidden="true"></span> Тестове
                             </NavLink>
                         </li>
+                        
                         <li class="nav-item">
                             <NavLink class="nav-link" href="neznam">
                                 <span class="oi oi-list-rich" aria-hidden="true"></span> Виртуални ученици
@@ -28,41 +66,9 @@
                         </li>
                         <a href="Identity/Account/Manage">Hello, @context.User.Identity?.Name!</a>
                         <form method="post" action="Identity/Account/LogOut">
-                            <button type="submit" class="nav-link btn btn-link">Log out</button>
+                            <button type="submit" class="nav-link btn btn-link">Излез</button>
                         </form>
                     </Authorized>
-                    <NotAuthorized>
-                        <li class="nav-item">
-                            <NavLink class="nav-link" href="/Register">
-                                <span class="oi oi-person" aria-hidden="true"></span> Register
-                            </NavLink>
-                        </li>
-                        <li class="nav-item">
-                            <NavLink class="nav-link" href="/Login">
-                                <span class="oi oi-account-login" aria-hidden="true"></span> Log in
-                            </NavLink>
-                        </li>
-                    </NotAuthorized>
-                </AuthorizeView>
-                <AuthorizeView Roles="Admin">
-                    <li class="nav-item">
-                        <NavLink class="nav-link" href="adminpage">
-                            <span class="oi oi-list-rich" aria-hidden="true"></span> Admin page
-                        </NavLink>
-                    </li>
-                    <li class="nav-item">
-                        <NavLink class="nav-link" href="rolepage">
-                            <span class="oi oi-list-rich" aria-hidden="true"></span> Role page
-                        </NavLink>
-                    </li>
-                </AuthorizeView>
-                <AuthorizeView Policy="AdminPolicy">
-
-                    <li class="nav-item">
-                        <NavLink class="nav-link" href="policypage">
-                            <span class="oi oi-list-rich" aria-hidden="true"></span> Policy page
-                        </NavLink>
-                    </li>
                 </AuthorizeView>
             </ul>
         </div>
