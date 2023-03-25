@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/counter">Информационна система</a>
+        <a class="navbar-brand" href="@dependancyHref">Информационна система</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,19 +44,76 @@
                 <AuthorizeView Roles="User">
                     <Authorized>
                         <li class="nav-item">
-                            <NavLink class="nav-link" href="counter" Match="NavLinkMatch.All">
+                            <NavLink class="nav-link" Match="NavLinkMatch.All">
                                 <span class="oi oi-home" aria-hidden="true"></span> Учебни материали
                             </NavLink>
+                            <ul>
+                                 <li class="nav-item">
+                                 <NavLink class="nav-link" href="ExamOptions" style="line-height: 1rem; margin-left: 5%; margin-right: 5%; margin-bottom: 5%;">
+                                     <span>Примерни изпитни варианти ДКИ</span>
+                                 </NavLink>
+                                 </li>
+                                 <li class="nav-item">
+                                 <NavLink class="nav-link" href="#" style="line-height: 1rem; margin-left: 5%; margin-right: 5%; margin-bottom: 5%;">
+                                     <span>Примерни изпитни тестове ДКИ</span>
+                                 </NavLink>
+                                 </li>
+                            </ul>
                         </li>
+
                         <li class="nav-item">
-                            <NavLink class="nav-link" href="fetchdata">
+                            <NavLink class="nav-link">
                                 <span class="oi oi-list-rich" aria-hidden="true"></span> Мултимедия
                             </NavLink>
+                            <ul style="min-width: 160%;">
+                                 <li class="nav-item">
+                                 <NavLink class="nav-link" href="counter" style="line-height: 1rem; margin-left: 5%; margin-right: 5%; margin-bottom: 5%;">
+                                     <span>Компютърна архитектура</span>
+                                 </NavLink>
+                                 </li>
+                                 <li class="nav-item">
+                                 <NavLink class="nav-link" href="#" style="line-height: 1rem; margin-left: 5%; margin-right: 5%; margin-bottom: 5%;">
+                                     <span>Запомнящи периферни устройства</span>
+                                 </NavLink>
+                                 </li>
+                                 <li class="nav-item">
+                                 <NavLink class="nav-link" href="#" style="line-height: 1rem; margin-left: 5%; margin-right: 5%; margin-bottom: 5%;">
+                                     <span>Компютърни мрежи</span>
+                                 </NavLink>
+                                 </li>
+                                 <li class="nav-item">
+                                 <NavLink class="nav-link" href="#" style="line-height: 1rem; margin-left: 5%; margin-right: 5%; margin-bottom: 5%;">
+                                     <span>Програмиране</span>
+                                 </NavLink>
+                                 </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <NavLink class="nav-link" href="fetchdata">
+                            <NavLink class="nav-link">
                                 <span class="oi oi-list-rich" aria-hidden="true"></span> Тестове
                             </NavLink>
+                            <ul style="min-width: 210%;">
+                                 <li class="nav-item">
+                                 <NavLink class="nav-link" href="fetchdata" style="line-height: 1rem; margin-left: 5%; margin-right: 5%; margin-bottom: 5%;">
+                                     <span>Компютърна архитектура</span>
+                                 </NavLink>
+                                 </li>
+                                 <li class="nav-item">
+                                 <NavLink class="nav-link" href="#" style="line-height: 1rem; margin-left: 5%; margin-right: 5%; margin-bottom: 5%;">
+                                     <span>Запомнящи периферни устройства</span>
+                                 </NavLink>
+                                 </li>
+                                 <li class="nav-item">
+                                 <NavLink class="nav-link" href="#" style="line-height: 1rem; margin-left: 5%; margin-right: 5%; margin-bottom: 5%;">
+                                     <span>Компютърни мрежи</span>
+                                 </NavLink>
+                                 </li>
+                                 <li class="nav-item">
+                                 <NavLink class="nav-link" href="#" style="line-height: 1rem; margin-left: 5%; margin-right: 5%; margin-bottom: 5%;">
+                                     <span>Програмиране</span>
+                                 </NavLink>
+                                 </li>
+                            </ul>
                         </li>
                         
                         <li class="nav-item">
@@ -75,11 +132,48 @@
         </CascadingAuthenticationState>
     </div>
 </nav>
+<style>
+    .nav-item{
+        position: relative;
+    }
+    .navbar ul ul{
+        position: absolute;
+        border-radius: 3%;
+        padding: 0;
+        min-width: -webkit-fill-available;
+        background-color: rgba(var(--bs-dark-rgb),var(--bs-bg-opacity)) !important;
+        display: none;
+        list-style: none;
+        top: 100%;
+        left: 0;
+    }
+    .navbar ul li:hover > ul{
+        display: block;
+    }
+    
+
+</style>
 
 @code {
+    [CascadingParameter] protected Task<AuthenticationState> AuthStat { get; set; }
+
     private bool collapseNavMenu = true;
+    private string dependancyHref = string.Empty;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var user = (await AuthStat).User;
+        if(!user.Identity.IsAuthenticated)
+        {
+            dependancyHref = "/Login";
+        }
+        else
+        {
+            dependancyHref = "/counter";
+        }
+    }
 
     private void ToggleNavMenu()
     {
