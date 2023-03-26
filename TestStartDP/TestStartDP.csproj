@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Resource\" />
     <Folder Include="Pages\ResourceFolder\" />
   </ItemGroup>
 

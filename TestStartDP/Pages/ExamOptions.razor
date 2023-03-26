@@ -1,7 +1,14 @@
 ﻿@page "/ExamOptions"
+@using TestStartDP.Data
+
+@inject FileUploadService FileUploadService
 
 <h3>ExamOptions</h3>
 
-@code {
+<InputFile multiple ></InputFile>
 
+<button class="btn btn-success">Upload to SQL</button>
+<br />
+
+@code {
 }
