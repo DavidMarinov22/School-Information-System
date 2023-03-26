@@ -23,24 +23,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/A Programming/C\#/TestStartDP/TestStartDP/Pages/Counter.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/A Programming/C\#/TestStartDP/TestStartDP/Pages/ExamOptions.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXhhbU9wdGlvbnMucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/A Programming/C\#/TestStartDP/TestStartDP/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/A Programming/C\#/TestStartDP/TestStartDP/Pages/HomePage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/A Programming/C\#/TestStartDP/TestStartDP/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/A Programming/C\#/TestStartDP/TestStartDP/Pages/RolePage.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9sZVBhZ2UucmF6b3I=
+[D:/A Programming/C\#/TestStartDP/TestStartDP/Pages/Multimedia/ComputerArchitecture.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXVsdGltZWRpYVxDb21wdXRlckFyY2hpdGVjdHVyZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/A Programming/C\#/TestStartDP/TestStartDP/Pages/Multimedia/ComputerNetwork.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXVsdGltZWRpYVxDb21wdXRlck5ldHdvcmsucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/A Programming/C\#/TestStartDP/TestStartDP/Pages/Multimedia/Programming.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXVsdGltZWRpYVxQcm9ncmFtbWluZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/A Programming/C\#/TestStartDP/TestStartDP/Pages/Multimedia/ZPU.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXVsdGltZWRpYVxaUFUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/A Programming/C\#/TestStartDP/TestStartDP/Pages/StudyMaterials/ExamOptions.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZHlNYXRlcmlhbHNcRXhhbU9wdGlvbnMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/A Programming/C\#/TestStartDP/TestStartDP/Pages/StudyMaterials/ExamTests.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZHlNYXRlcmlhbHNcRXhhbVRlc3RzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/A Programming/C\#/TestStartDP/TestStartDP/Shared/LoginDisplay.razor]

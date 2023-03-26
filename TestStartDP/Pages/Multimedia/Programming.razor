@@ -1,0 +1,65 @@
+﻿@page "/Programming"
+
+@inject IJSRuntime JSRuntime
+@inject IWebHostEnvironment _environment
+
+@using System.Data
+@using Microsoft.AspNetCore.Mvc
+@using TestStartDP.Data
+
+<h3>Програмиране</h3>
+@*<InputFile multiple ></InputFile>
+
+<button class="btn btn-success">Upload to SQL</button>
+<br />*@
+
+
+<table class="table table-responsive table-bordered">
+    <tr>
+        <th>File Name</th>
+        <th></th>
+    </tr>
+  
+    @foreach (FileModel file in Model)
+    {
+        <tr>
+            <td>@file.FileName</td>
+            <td><a @onclick="@(() => {DownloadFile(file.FileName);})" href="/Programming">Свали</a></td>
+        </tr>
+    }
+</table>
+
+@code {
+
+     private IEnumerable<FileModel> Model = new List<FileModel>();
+
+    protected override void OnInitialized()
+    {
+        string[] filePaths = Directory.GetFiles(Path.Combine(this._environment.WebRootPath, "Resource/Мултимедия Програмиране/"));
+
+        List<FileModel> list = new List<FileModel>();
+        foreach (var filePath in filePaths)
+        {
+            list.Add(new FileModel() { FileName = Path.GetFileName(filePath) });
+        }
+        Model = list.OrderBy(f => f.FileName).ToList();
+    }
+
+    public async void DownloadFile(string fileName)
+    {
+        string path = Path.Combine(this._environment.WebRootPath, "Resource/Мултимедия Програмиране/") + fileName;
+        MemoryStream ms = new MemoryStream();
+        using(ms = new MemoryStream())
+        {
+            using(FileStream file = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            {
+                var bytes = new byte[file.Length];
+                file.Read(bytes, 0, (int)file.Length);
+                ms.Write(bytes, 0, (int)file.Length);
+            
+            }
+                await FileUtils.SaveAs(this.JSRuntime, fileName, ms.ToArray());
+        }
+
+    }
+}
