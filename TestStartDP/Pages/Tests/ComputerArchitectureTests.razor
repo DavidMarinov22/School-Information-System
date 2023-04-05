@@ -1,4 +1,5 @@
-﻿@page "/ExamTests"
+﻿@page "/ComputerArchitectureTests"
+
 @inject IJSRuntime JSRuntime
 @inject IWebHostEnvironment _environment
 
@@ -6,9 +7,7 @@
 @using Microsoft.AspNetCore.Mvc
 @using TestStartDP.Data
 
-
-<h3>Примерни изпитни тестове ДКИ</h3>
-
+<h3>Компютърни архитектури</h3>
 @*<InputFile multiple ></InputFile>
 
 <button class="btn btn-success">Upload to SQL</button>
@@ -25,17 +24,18 @@
     {
         <tr>
             <td>@file.FileName</td>
-            <td><a @onclick="@(() => {DownloadFile(file.FileName);})" href="/ExamTests">Свали</a></td>
+            <td><a @onclick="@(() => {DownloadFile(file.FileName);})" href="/ComputerArchitecture">Свали</a></td>
         </tr>
     }
 </table>
 
 @code {
+
      private IEnumerable<FileModel> Model = new List<FileModel>();
 
     protected override void OnInitialized()
     {
-        string[] filePaths = Directory.GetFiles(Path.Combine(this._environment.WebRootPath, "Resource/Примерни изпитни тестове ДКИ/"));
+        string[] filePaths = Directory.GetFiles(Path.Combine(this._environment.WebRootPath, "Resource/Тестове/КА/"));
 
         List<FileModel> list = new List<FileModel>();
         foreach (var filePath in filePaths)
@@ -47,7 +47,7 @@
 
     public async void DownloadFile(string fileName)
     {
-        string path = Path.Combine(this._environment.WebRootPath, "Resource/Примерни изпитни тестове ДКИ/") + fileName;
+        string path = Path.Combine(this._environment.WebRootPath, "Resource/Тестове/КА/") + fileName;
         MemoryStream ms = new MemoryStream();
         using(ms = new MemoryStream())
         {
