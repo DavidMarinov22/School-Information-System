@@ -7,19 +7,13 @@
 @using Microsoft.AspNetCore.Mvc
 @using TestStartDP.Data
 
-@*<h3></h3>*@
-@*<InputFile multiple ></InputFile>
-
-<button class="btn btn-success">Upload to SQL</button>
-<br />*@
 <div class="table-container">
-      <h2 class="table-heading">Тестове за Компютърни архитектури</h2>
+      <h2 class="table-heading">Тестове по Компютърни архитектури</h2>
 
       <table>
         <thead>
           <tr>
             <th>Файл</th>
-            <th></th>
           </tr>
         </thead>
 
@@ -27,21 +21,12 @@
            @foreach (FileModel file in Model)
             {
                 <tr>
-                    <td>@file.FileName</td>
-                    <td><a @onclick="@(() => {DownloadFile(file.FileName);})" href="/ComputerArchitectureTests">Свали</a></td>
+                    <td><a @onclick="@(() => {DownloadFile(file.FileName);})" href="/ComputerArchitectureTests">@file.FileNameFiltered</a></td>
                 </tr>
             }
         </tbody>
       </table>
     </div>
-
-@*<table class="table table-responsive table-bordered">
-    <tr>
-        
-    </tr>
-  
-   
-</table>*@
 <style>
 		body {
 	height: 100%;
@@ -69,7 +54,8 @@
 }
 
 .table-container table {
-  width: 100%;
+  width: 50%;
+  margin-left: 25%;
   color: #222;
   padding: 24px;
   box-shadow: 0 4px 15px -8px rgba(0, 0, 0, 0.4);
@@ -79,17 +65,32 @@
 .table-container table thead tr {
   background-color: #55608f;
   color: white;
+  text-align:center;
+}
+.table-container table thead th {
+  border-radius: 10px 10px 0 0;
 }
 
+ .table-container table tbody tr:last-of-type td {
+border-radius: 0 0 10px 10px;
+}
 .table-container table td,
 .table-container table th {
  padding: 15px;
 	background-color: rgba(255,255,255,0.2);
 	color: white;
-  
+    text-align:center;
 }
-
-
+.table-container table td:hover{
+    background-color: #6c757d;
+}
+a, .btn-link {
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    color: white;
+}
 </style>
 
 
@@ -107,6 +108,29 @@
             list.Add(new FileModel() { FileName = Path.GetFileName(filePath) });
         }
         Model = list.OrderBy(f => f.FileName).ToList();
+        foreach(var item in Model)
+        {
+            if(item.FileName.Contains(".docx"))
+            {
+                item.FileNameFiltered = item.FileName.Replace(".docx", "");
+            }
+            else if(item.FileName.Contains(".doc"))
+            {
+                item.FileNameFiltered = item.FileName.Replace(".doc", "");
+            }
+            else if(item.FileName.Contains(".pptx"))
+            {
+                item.FileNameFiltered = item.FileName.Replace(".pptx", "");
+            }
+            else if(item.FileName.Contains(".odt"))
+            {
+                item.FileNameFiltered = item.FileName.Replace(".odt", "");
+            }
+            else if(item.FileName.Contains(".odp"))
+            {
+                item.FileNameFiltered = item.FileName.Replace(".odp", "");
+            }
+        }
     }
 
     public async void DownloadFile(string fileName)

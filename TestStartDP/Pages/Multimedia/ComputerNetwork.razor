@@ -7,27 +7,101 @@
 @using Microsoft.AspNetCore.Mvc
 @using TestStartDP.Data
 
-<h3>Компютърни мрежи</h3>
+<h3></h3>
 @*<InputFile multiple ></InputFile>
 
 <button class="btn btn-success">Upload to SQL</button>
 <br />*@
+<div class="table-container">
+    <h2 class="table-heading">Компютърни мрежи</h2>
 
+    <table>
+        <thead>
+            <tr>
+                <th>Файл</th>
+            </tr>
+        </thead>
 
-<table class="table table-responsive table-bordered">
-    <tr>
-        <th>File Name</th>
-        <th></th>
-    </tr>
-  
-    @foreach (FileModel file in Model)
-    {
-        <tr>
-            <td>@file.FileName</td>
-            <td><a @onclick="@(() => {DownloadFile(file.FileName);})" href="/ComputerNetwork">Свали</a></td>
-        </tr>
+        <tbody>
+            @foreach (FileModel file in Model)
+            {
+                <tr>
+                    <td><a @onclick="@(() => {DownloadFile(file.FileName);})" href="/ComputerNetwork">@file.FileNameFiltered</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    body {
+        height: 100%;
     }
-</table>
+
+    body {
+        margin: 0;
+        background: linear-gradient(90deg, #49a09d, #5f2c82);
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+
+    .table-container {
+        padding: 32px;
+        font-family: "Roboto", sans-serif;
+    }
+
+        .table-container h2.table-heading {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 24px;
+            margin-bottom: 32px;
+            padding-bottom: 8px;
+        }
+
+        .table-container table {
+            width: 50%;
+            margin-left: 25%;
+            color: #222;
+            padding: 24px;
+            box-shadow: 0 4px 15px -8px rgba(0, 0, 0, 0.4);
+            border-collapse: collapse;
+        }
+
+            .table-container table thead tr {
+                background-color: #55608f;
+                color: white;
+                text-align: center;
+            }
+
+            .table-container table thead th {
+                border-radius: 10px 10px 0 0;
+            }
+
+            .table-container table tbody tr:last-of-type td {
+                border-radius: 0 0 10px 10px;
+            }
+
+            .table-container table td,
+            .table-container table th {
+                padding: 15px;
+                background-color: rgba(255,255,255,0.2);
+                color: white;
+                text-align: center;
+            }
+
+                .table-container table td:hover {
+                    background-color: #6c757d;
+                }
+
+    a, .btn-link {
+        color: white;
+        text-decoration: none;
+    }
+
+        a:hover {
+            color: white;
+        }
+</style>
 
 @code {
 
@@ -43,6 +117,37 @@
             list.Add(new FileModel() { FileName = Path.GetFileName(filePath) });
         }
         Model = list.OrderBy(f => f.FileName).ToList();
+        foreach(var item in Model)
+        {
+            if(item.FileName.Contains(".docx"))
+            {
+                item.FileNameFiltered = item.FileName.Replace(".docx", "");
+            }
+            else if(item.FileName.Contains(".doc"))
+            {
+                item.FileNameFiltered = item.FileName.Replace(".doc", "");
+            }
+            else if(item.FileName.Contains(".pptx"))
+            {
+                item.FileNameFiltered = item.FileName.Replace(".pptx", "");
+            }
+            else if(item.FileName.Contains(".ppt"))
+            {
+                item.FileNameFiltered = item.FileName.Replace(".ppt", "");
+            }
+            else if(item.FileName.Contains(".pptm"))
+            {
+                item.FileNameFiltered = item.FileName.Replace(".pptm", "");
+            }
+            else if(item.FileName.Contains(".odt"))
+            {
+                item.FileNameFiltered = item.FileName.Replace(".odt", "");
+            }
+            else if(item.FileName.Contains(".odp"))
+            {
+                item.FileNameFiltered = item.FileName.Replace(".odp", "");
+            }
+        }
     }
 
     public async void DownloadFile(string fileName)
