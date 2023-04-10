@@ -68,6 +68,10 @@
     }
 }
 
+.table-heading{
+    color: white;
+}
+
 body {
     margin: 0;
     font-family: var(--bs-body-font-family);
