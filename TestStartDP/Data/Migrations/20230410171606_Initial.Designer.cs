@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestStartDP.Data;
 
@@ -11,9 +12,10 @@ using TestStartDP.Data;
 namespace TestStartDP.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230410171606_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -199,9 +201,6 @@ namespace TestStartDP.Data.Migrations
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PersonIdPerson")
-                        .HasColumnType("int");
-
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
 
@@ -220,6 +219,8 @@ namespace TestStartDP.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("IdPerson");
+
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
 
@@ -227,8 +228,6 @@ namespace TestStartDP.Data.Migrations
                         .IsUnique()
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
-
-                    b.HasIndex("PersonIdPerson");
 
                     b.ToTable("AspNetUsers", (string)null);
                 });
@@ -327,7 +326,7 @@ namespace TestStartDP.Data.Migrations
                 {
                     b.HasOne("TestStartDP.Data.Person", "Person")
                         .WithMany()
-                        .HasForeignKey("PersonIdPerson")
+                        .HasForeignKey("IdPerson")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
