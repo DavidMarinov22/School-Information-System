@@ -1,0 +1,44 @@
+﻿@page "/UsersList"
+
+@using TestStartDP.Data
+@inject IPersonService PersonService
+
+<h3>UsersList</h3>
+
+@*<select name="cars" id="cars">
+    @foreach (var user in users)
+            {
+               <option value="@user.IdPerson">@user.FirstName</option>
+            }
+  
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>*@
+<table class='table'>
+        <thead>
+            <tr>
+                <th>Име</th>
+                <th>Презиме</th>
+                <th>Фамилия</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in users)
+            {
+                <tr>
+                    <td>@user.FirstName</td>
+                    <td>@user.SecondName</td>
+                    <td>@user.FamilyName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+@code {
+    private IEnumerable<PersonVM> users = new List<PersonVM>();
+    protected override void OnInitialized()
+    {
+        this.users = this.PersonService.GetAllPersons();
+    }
+}
