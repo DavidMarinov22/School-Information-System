@@ -6,18 +6,18 @@ namespace TestStartDP.Data
     {
         public int IdPerson { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Полето 'Име' е задължително!")]
         [StringLength(100)]
         public string FirstName { get; set; }
 
         [StringLength(100)]
         public string SecondName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Полето 'Фамилия' е задължително!")]
         [StringLength(100)]
         public string FamilyName { get; set; }
 
-        [StringLength(10)]
+        [Required(ErrorMessage = "Полето 'ЕГН' е задължително!")]
         public string Indent { get; set; }
         public DateTime? BirthDate { get; set; }
 

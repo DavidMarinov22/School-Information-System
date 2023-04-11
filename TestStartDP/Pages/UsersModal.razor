@@ -1,0 +1,372 @@
+﻿@using System.Text.RegularExpressions
+@using Microsoft.AspNetCore.Mvc.Rendering
+@using TestStartDP.Data
+
+
+<div class="modal fade show" id="myModal" style="display:block; background-color: rgba(10,10,10,.8);" aria-modal="true" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content" style="width: 150%; right: 25%;">
+            <div class="modal-header">
+                <h4 class="modal-title">@Title</h4>
+                <button type="button" class="close" @onclick="@ModalCancel">&times;</button>
+            </div>
+            <div class="modal-body">
+                <EditForm EditContext="this.editContext" OnSubmit="Save" id="testForm">
+                    <DataAnnotationsValidator />
+                    <ValidationSummary />
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <!-- text input -->
+                                <div class="form-group required">
+                                    <label class="control-label">
+                                        Име:
+                                    </label>
+                                    <InputText class="form-control" placeholder="Име" @bind-Value="model.FirstName" />
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <!-- text input -->
+                                <div class="form-group required">
+                                    <label class="control-label">
+                                        Презиме:
+                                    </label>
+                                    <div>
+                                        <InputText class="form-control" placeholder="Презиме" @bind-Value="model.SecondName" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <!-- text input -->
+                                <div class="form-group required">
+                                    <label class="control-label">
+                                        Фамилия:
+                                    </label>
+                                    <div>
+
+                                        <InputText class="form-control" placeholder="Фамилия" @bind-Value="model.FamilyName" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <!-- text input -->
+                                <div class="form-group required">
+                                    <label class="control-label">
+                                        ЕГН:
+                                    </label>
+                                    <div>
+                                        <InputText class="form-control" placeholder="ЕГН" @onfocusout="() => IsEGNValid()" @bind-Value="model.Indent" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <!-- text input -->
+                                <div class="form-group">
+                                    <label class="control-label">
+                                        Дата на раждане:
+                                    </label>
+                                    <InputDate TValue="DateTime?" class="form-control" @bind-Value="this.model.BirthDate" Format="dd.MM.yyyy"></InputDate>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <!-- text input -->
+                                <div class="form-group required">
+                                    <label class="control-label">
+                                        Пол:
+                                    </label>
+                                    <div>
+                                        <InputSelect @bind-Value="model.Sex" class="form-control">
+                                            <option disabled="true" value="Пол">Пол</option>
+                                            <option value="Мъж">Мъж</option>
+                                            <option value="Жена">Жена</option>
+                                            <option value="Друго">Друго</option>
+                                        </InputSelect>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <InputSelect id="role-select" @bind-Value="newUser.UserRole">
+                                    @foreach (var role in selectList)
+                                    {
+                                        <option value="@role.Value" selected=@role.Selected>@role.Text</option>
+                                    }
+                                </InputSelect>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </EditForm>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn" @onclick="@ModalCancel">Отказ</button>
+                <button type="submit" form="testForm" class="btn btn-primary">Запиши</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> OnClose { get; set; }
+
+    [Parameter]
+    public EventCallback<PersonVM> OnSubmit { get; set; }
+
+
+    private EditContext? editContext;
+    private ValidationMessageStore? messageStore;
+    private PersonVM model = new PersonVM();
+    
+    private User newUser = new User();
+    private List<Role> rolesList = new List<Role>();
+    private List<SelectListItem> selectList = new List<SelectListItem>();
+    protected override void OnInitialized()
+    {
+        this.editContext = new EditContext(this.model);
+        model.Sex = "Пол";
+        rolesList = new List<Role>()
+        {
+            new Role(){ RoleName="Admin", Id="1" },
+            new Role(){ RoleName="User", Id="4" },
+            new Role(){ RoleName="Teacher", Id="5" }
+        };
+
+        foreach (var role in rolesList)
+        {
+            if (rolesList.Count < 1)
+            {
+                selectList.Add(new SelectListItem()
+                    {
+                        Text = role.RoleName,
+                        Value = role.Id,
+                        Selected = true
+                    });
+            }
+            else
+            {
+                selectList.Add(new SelectListItem()
+                    {
+                        Text = role.RoleName,
+                        Value = role.Id,
+                        Selected = false
+                    });
+            }
+        }
+    }
+    
+    private async void AddUserWithRole(EditContext context)
+    {
+        //var userModel = context.Model as User;
+
+        //var user = new IdentityUser { UserName = userModel.LoginName,
+        //                            Email = userModel.LoginName,
+        //                            EmailConfirmed = true};
+
+        //var messagePrompt = "Failed";
+
+        //var result = await this._userManager.CreateAsync(user, "Password123!");
+
+        //if(result.Succeeded)
+        //{
+        //        messagePrompt = "User was added ";   
+        //    var getRoleFromList = rolesList.FirstOrDefault(x => x.Id == userModel?.UserRole);
+        //    var roleAddedResult = await this._userManager.AddToRoleAsync(user, getRoleFromList?.RoleName ?? "User");
+
+        //    if (roleAddedResult.Succeeded)
+        //    {
+        //        messagePrompt += "Role was added ";   
+        //    }
+
+        //    var claimAddedResult = await this._userManager.AddClaimAsync(user, new Claim(getRoleFromList?.RoleName ?? "User", getRoleFromList.Id));
+
+        //    if (roleAddedResult.Succeeded)
+        //    {
+        //            messagePrompt += "Claim was added ";   
+        //    }
+
+        //}
+        //await this.JsRuntime.InvokeVoidAsync("alert", messagePrompt);
+    }
+
+    private Task ModalCancel()
+    {
+        return OnClose.InvokeAsync(false);
+    }
+
+    private async Task Save()
+    {
+        this.editContext = new EditContext(this.model);
+        this.editContext.OnValidationRequested += this.ValidateEGN;
+        this.messageStore = new ValidationMessageStore(this.editContext);
+        this.editContext.EnableDataAnnotationsValidation();
+
+        var isValid = this.editContext.Validate();
+
+        if (isValid)
+        {
+            await OnSubmit.InvokeAsync(model);
+            this.StateHasChanged();
+        }
+    }
+    private async void IsEGNValid()
+    {
+        string EGN = "";
+
+        if (!string.IsNullOrEmpty(this.model.Indent))
+        {
+            this.model.Indent = this.model.Indent.Trim();
+            EGN = this.model.Indent;
+            var isValidEGN = Validate(EGN);
+            if (isValidEGN)
+            {
+                char charLastDigit = EGN[EGN.Length - 2];
+                int lastDigit = Convert.ToInt32(new string(charLastDigit, 1));
+                int year = int.Parse(EGN.Substring(0, 2));
+                int month = int.Parse(EGN.Substring(2, 2));
+                int day = int.Parse(EGN.Substring(4, 2));
+                if (month < 13)
+                {
+                    year += 1900;
+                }
+                else if (month > 20 && month < 33)
+                {
+                    year += 1800;
+                    month -= 20;
+                }
+                else if (month > 40 && month < 53)
+                {
+                    year += 2000;
+                    month -= 40;
+                }
+                var dt = new DateTime(year, month, day);
+                this.model.BirthDate = dt;
+                if (lastDigit % 2 == 0)
+                {
+                    this.model.Sex = "Мъж";
+                }
+                else
+                {
+                    this.model.Sex = "Жена";
+                }
+            }
+        }
+        this.StateHasChanged();
+    }
+
+    private void ValidateEGN(object? sender, ValidationRequestedEventArgs args)
+    {
+        this.messageStore?.Clear();
+        if (this.model.Indent != null)
+        {
+            this.model.Indent = this.model.Indent.Trim();
+
+            if (this.model.Indent.Length > 10)
+            {
+                FieldIdentifier fi = new FieldIdentifier(this.model, "Indent");
+                this.messageStore?.Add(fi, "Полето 'ЕГН' трябва да съдържа 10 символа!");
+            }
+            else
+            {
+                var checkEGN = Validate(this.model.Indent);
+
+                if (!checkEGN)
+                {
+                    FieldIdentifier fi = new FieldIdentifier(this.model, "Indent");
+                    this.messageStore?.Add(fi, "Невалидно ЕГН!");
+                }
+            }
+        }
+    }
+    private bool Validate(string egn)
+    {
+        bool isValid = CheckEGN(egn);
+
+        return isValid;
+    }
+
+    private bool CheckEGN(string personalId)
+    {
+        int[] egnWeights = new int[] { 2, 4, 8, 5, 10, 9, 7, 3, 6 };
+        Regex rgx = new Regex(@"^\d{10}$");
+
+        if (string.IsNullOrEmpty(personalId) ||
+            !rgx.IsMatch(personalId))
+        {
+            return false;
+        }
+
+        (int year, int month, int day) = ParseEGNDate(personalId);
+
+        if (!CheckDate(year, month, day))
+        {
+            return false;
+        }
+
+        int checksum = int.Parse(personalId.Substring(9, 1));
+        int egnSum = 0;
+
+        for (int i = 0; i < 9; i++)
+        {
+            egnSum += int.Parse(personalId.Substring(i, 1)) * egnWeights[i];
+        }
+
+        int validChecksum = egnSum % 11;
+
+        if (validChecksum == 10)
+        {
+            validChecksum = 0;
+        }
+
+        return checksum == validChecksum;
+    }
+
+    private bool CheckDate(int year, int month, int day)
+    {
+        bool result = true;
+
+        try
+        {
+            var date = new DateTime(year, month, day);
+        }
+        catch (ArgumentOutOfRangeException)
+        {
+            result = false;
+        }
+
+        return result;
+    }
+
+    private (int year, int month, int day) ParseEGNDate(string egn)
+    {
+        int year = int.Parse(egn.Substring(0, 2));
+        int month = int.Parse(egn.Substring(2, 2));
+        int day = int.Parse(egn.Substring(4, 2));
+
+        if (month > 40)
+        {
+            year += 2000;
+            month -= 40;
+        }
+        else if (month > 20)
+        {
+            year += 1800;
+            month -= 20;
+        }
+        else
+        {
+            year += 1900;
+        }
+
+        return (year, month, day);
+    }
+}

@@ -3,7 +3,7 @@
 @using TestStartDP.Data
 @inject IPersonService PersonService
 
-<h3>UsersList</h3>
+<h3>Потребители</h3>
 
 @*<select name="cars" id="cars">
     @foreach (var user in users)
@@ -15,6 +15,7 @@
   <option value="mercedes">Mercedes</option>
   <option value="audi">Audi</option>
 </select>*@
+<button type="button" class="btn btn-primary" @onclick="OpenModal">Добави</button>
 <table class='table'>
         <thead>
             <tr>
@@ -34,11 +35,44 @@
             }
         </tbody>
     </table>
-
+    @if(IsOpenUserModal)
+    {
+        <UsersModal Title="Добавяне на нов потребител" OnClose="CloseModal" OnSubmit="SaveAfterSubmit"></UsersModal>
+    }
 @code {
+    private bool IsOpenUserModal = false;
     private IEnumerable<PersonVM> users = new List<PersonVM>();
     protected override void OnInitialized()
     {
         this.users = this.PersonService.GetAllPersons();
+    }
+
+    private void OpenModal()
+    {
+        this.IsOpenUserModal = true;
+        this.StateHasChanged();
+    }
+
+    private void CloseModal()
+    {
+        this.IsOpenUserModal = false;
+        this.StateHasChanged();
+    }
+
+    private async Task SaveAfterSubmit(PersonVM model)
+    {
+        var msg = await this.PersonService.CreatePersonAsync(model);
+        //if(msg.Contains("ERROR/"))
+            //{
+            //    msg = msg.Replace("ERROR/", "");
+            //}
+            //else
+            //{  
+            //}
+
+        this.IsOpenUserModal = false;
+        
+        this.users = this.PersonService.GetAllPersons();
+        this.StateHasChanged();
     }
 }
