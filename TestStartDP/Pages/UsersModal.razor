@@ -93,7 +93,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
+                        @if (this.User == null)
+                        {
+                         <div class="row">
                             <div class="col-sm-6">
                                 <!-- text input -->
                                 <div class="form-group required">
@@ -105,23 +107,44 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-5">
+                            <AuthorizeView Policy="AdminPolicy">
+                                <Authorized Context="ctx">
+                                    <div class="col-sm-5">
+                                        <div class="form-group required">
+                                            <label class="control-label">
+                                                Роля:
+                                            </label>
+                                            <div>
+                                                <InputSelect class="form-control" id="role-select" @bind-Value="model.IdRole">
+                                                    <option disabled="true" value="0">Роля</option>
+                                                    @foreach (var role in selectList)
+                                                    {
+                                                        <option value="@role.Value" selected=@role.Selected>@role.Text</option>
+                                                    }
+                                                </InputSelect>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Authorized>
+                            </AuthorizeView>
+                        </div>
+                        }    
+                        else
+                        {
+                           <div class="row">
+                            <div class="col-sm-6">
+                                <!-- text input -->
                                 <div class="form-group required">
                                     <label class="control-label">
-                                        Роля:
+                                        Имейл:
                                     </label>
                                     <div>
-                                        <InputSelect class="form-control" id="role-select" @bind-Value="model.IdRole">
-                                            <option disabled="true" value="0">Роля</option>
-                                            @foreach (var role in selectList)
-                                            {
-                                                <option value="@role.Value" selected=@role.Selected>@role.Text</option>
-                                            }
-                                        </InputSelect>
+                                        <InputText disabled="true" class="form-control" placeholder="Имейл" @bind-Value="model.Email" />
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
+                        }
                     </div>
 
 
@@ -137,10 +160,10 @@
 </div>
 
 <style>
-.close{
-    border: none!important;
-    background: transparent;
-}
+    .close {
+        border: none !important;
+        background: transparent;
+    }
 </style>
 
 @code {
@@ -153,6 +176,9 @@
     [Parameter]
     public EventCallback<PersonVM> OnSubmit { get; set; }
 
+    [Parameter]
+    public IdentityUser User { get; set; }
+
 
     private EditContext? editContext;
     private ValidationMessageStore? messageStore;
@@ -161,7 +187,7 @@
     private User newUser = new User();
     private List<Role> rolesList = new List<Role>();
     private List<SelectListItem> selectList = new List<SelectListItem>();
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         this.editContext = new EditContext(this.model);
         model.Sex = "Пол";
@@ -172,6 +198,12 @@
             new Role(){ RoleName="User", Id="4" },
             new Role(){ RoleName="Teacher", Id="5" }
         };
+        if (User != null)
+        {
+            this.model.Email = User.Email;
+            var role = (await _userManager.GetRolesAsync(this.User)).First();
+            this.model.IdRole = role == "Admin" ? "1" : role == "User" ? "4" : role == "Teacher" ? "5" : "0";
+        }
 
         foreach (var role in rolesList)
         {
@@ -212,47 +244,50 @@
 
         if (isValid)
         {
-            var userModel = this.model;
-
-            var user = new IdentityUser
-                {
-                    UserName = userModel.Email,
-                    Email = userModel.Email,
-                    EmailConfirmed = true,
-                    TwoFactorEnabled = true,
-                    PhoneNumber = ""
-                    
-                };
-
-            var messagePrompt = "Failed";
-
-            var result = await this._userManager.CreateAsync(user, "Password123!");
-
-            if (result.Succeeded)
+            if (User == null)
             {
-                messagePrompt = "User was added ";
-                var getRoleFromList = rolesList.FirstOrDefault(x => x.Id == userModel?.IdRole);
-                var roleAddedResult = await this._userManager.AddToRoleAsync(user, getRoleFromList?.RoleName ?? "User");
+                var userModel = this.model;
 
-                if (roleAddedResult.Succeeded)
+                var user = new IdentityUser
+                    {
+                        UserName = userModel.Email,
+                        Email = userModel.Email,
+                        EmailConfirmed = true,
+                        TwoFactorEnabled = true,
+                        PhoneNumber = ""
+
+                    };
+
+                var messagePrompt = "Failed";
+
+                var result = await this._userManager.CreateAsync(user, "Password123!");
+
+                if (result.Succeeded)
                 {
-                    messagePrompt += "Role was added ";
+                    messagePrompt = "User was added ";
+                    var getRoleFromList = rolesList.FirstOrDefault(x => x.Id == userModel?.IdRole);
+                    var roleAddedResult = await this._userManager.AddToRoleAsync(user, getRoleFromList?.RoleName ?? "User");
+
+                    if (roleAddedResult.Succeeded)
+                    {
+                        messagePrompt += "Role was added ";
+                    }
+
+                    var claimAddedResult = await this._userManager.AddClaimAsync(user, new Claim(getRoleFromList?.RoleName ?? "User", getRoleFromList.Id));
+
+                    if (roleAddedResult.Succeeded)
+                    {
+                        messagePrompt += "Claim was added ";
+                    }
                 }
-
-                var claimAddedResult = await this._userManager.AddClaimAsync(user, new Claim(getRoleFromList?.RoleName ?? "User", getRoleFromList.Id));
-
-                if (roleAddedResult.Succeeded)
+                else
                 {
-                    messagePrompt += "Claim was added ";
+                    await this.JsRuntime.InvokeVoidAsync("alert", "Невалиден имейл!");
+                    this.StateHasChanged();
+                    return;
                 }
+            }
 
-            }
-            else
-            {    
-                await this.JsRuntime.InvokeVoidAsync("alert", "Невалиден имейл!");
-                this.StateHasChanged();
-                return;
-            }
             await OnSubmit.InvokeAsync(model);
             this.StateHasChanged();
         }

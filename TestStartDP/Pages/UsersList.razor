@@ -1,6 +1,8 @@
 ﻿@page "/UsersList"
 
 @using TestStartDP.Data
+
+@inject IJSRuntime JsRuntime
 @inject IPersonService PersonService
 
 <h3>Потребители</h3>
@@ -15,8 +17,41 @@
   <option value="mercedes">Mercedes</option>
   <option value="audi">Audi</option>
 </select>*@
-<button type="button" class="btn btn-primary" @onclick="OpenModal">Добави</button>
-<table class='table'>
+<AuthorizeView Policy="AdminPolicy">
+    <Authorized>
+        <button type="button" class="btn btn-primary" @onclick="OpenModal">Добави</button>
+        
+        <table class='table'>
+        <thead>
+            <tr>
+                <th>Име</th>
+                <th>Презиме</th>
+                <th>ЕГН</th>
+                <th>Имейл</th>
+                <th>Роля</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in users)
+            {
+                <tr>
+                    <td>@user.FirstName</td>
+                    <td>@user.FamilyName</td>
+                    <td>@user.Indent</td>
+                    <td>@user.Email</td>
+                    <td>@user.RoleName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    </Authorized>
+</AuthorizeView>
+
+<AuthorizeView Policy="TeacherPolicy">
+    <Authorized>
+        <button type="button" class="btn btn-primary" @onclick="OpenModal">Добави</button>
+
+        <table class='table'>
         <thead>
             <tr>
                 <th>Име</th>
@@ -37,6 +72,35 @@
             }
         </tbody>
     </table>
+
+    </Authorized>
+</AuthorizeView>
+
+<AuthorizeView Policy="UserPolicy">
+    <Authorized>
+        <table class='table'>
+        <thead>
+            <tr>
+                <th>Име</th>
+                <th>Презиме</th>
+                <th>Фамилия</th>
+                <th>Роля</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in users)
+            {
+                <tr>
+                    <td>@user.FirstName</td>
+                    <td>@user.SecondName</td>
+                    <td>@user.FamilyName</td>
+                    <td>@user.RoleName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    </Authorized>
+</AuthorizeView>
     @if(IsOpenUserModal)
     {
         <UsersModal Title="Добавяне на нов потребител" OnClose="CloseModal" OnSubmit="SaveAfterSubmit"></UsersModal>
@@ -75,6 +139,7 @@
         this.IsOpenUserModal = false;
         
         this.users = this.PersonService.GetAllPersons();
+        await this.JsRuntime.InvokeVoidAsync("alert", "Успешно създаден профил!");
         this.StateHasChanged();
     }
 }
