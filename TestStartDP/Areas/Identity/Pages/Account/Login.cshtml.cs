@@ -119,7 +119,7 @@ namespace TestStartDP.Areas.Identity.Pages.Account
                 }
                 if (result.RequiresTwoFactor)
                 {
-                    return RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, RememberMe = Input.RememberMe });
+                    return LocalRedirect("/UpdatePassword");
                 }
                 if (result.IsLockedOut)
                 {

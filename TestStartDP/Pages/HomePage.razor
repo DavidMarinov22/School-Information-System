@@ -1,8 +1,29 @@
 ﻿@page "/homepage"
+@using Microsoft.AspNetCore.Identity
 @attribute [Authorize(Roles="Admin, User, Teacher")]
 
+@inject UserManager<IdentityUser> _userManager
+@inject SignInManager<IdentityUser> _signInManager
+
 <h1>HomePage</h1>
+ 
+@if (isNew)
+{
+    <UsersModal Title="Нов потребител в системата" OnClose="CloseModal"></UsersModal>
+}
 
 @code {
-
+    [CascadingParameter] protected Task<AuthenticationState> AuthStat { get; set; }
+    private bool isNew = false;
+    protected override async Task OnInitializedAsync()
+    {
+        var user = await _userManager.FindByNameAsync((await AuthStat).User.Identity.Name);
+        isNew = user.PhoneNumber == null;
+    }
+    
+    private void CloseModal()
+    {
+        this.isNew = false;
+        this.StateHasChanged();
+    }
 }

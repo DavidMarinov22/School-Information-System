@@ -1,7 +1,12 @@
 ﻿@using System.Text.RegularExpressions
+@using Microsoft.AspNetCore.Identity
 @using Microsoft.AspNetCore.Mvc.Rendering
+@using System.Security.Claims
 @using TestStartDP.Data
 
+@inject IJSRuntime JsRuntime
+@inject UserManager<IdentityUser> _userManager
+@inject SignInManager<IdentityUser> _signInManager
 
 <div class="modal fade show" id="myModal" style="display:block; background-color: rgba(10,10,10,.8);" aria-modal="true" role="dialog">
     <div class="modal-dialog">
@@ -89,13 +94,32 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-10">
-                                <InputSelect id="role-select" @bind-Value="newUser.UserRole">
-                                    @foreach (var role in selectList)
-                                    {
-                                        <option value="@role.Value" selected=@role.Selected>@role.Text</option>
-                                    }
-                                </InputSelect>
+                            <div class="col-sm-6">
+                                <!-- text input -->
+                                <div class="form-group required">
+                                    <label class="control-label">
+                                        Имейл:
+                                    </label>
+                                    <div>
+                                        <InputText class="form-control" placeholder="Имейл" @bind-Value="model.Email" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-5">
+                                <div class="form-group required">
+                                    <label class="control-label">
+                                        Роля:
+                                    </label>
+                                    <div>
+                                        <InputSelect class="form-control" id="role-select" @bind-Value="model.IdRole">
+                                            <option disabled="true" value="0">Роля</option>
+                                            @foreach (var role in selectList)
+                                            {
+                                                <option value="@role.Value" selected=@role.Selected>@role.Text</option>
+                                            }
+                                        </InputSelect>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -112,6 +136,13 @@
     </div>
 </div>
 
+<style>
+.close{
+    border: none!important;
+    background: transparent;
+}
+</style>
+
 @code {
     [Parameter]
     public string Title { get; set; }
@@ -126,7 +157,7 @@
     private EditContext? editContext;
     private ValidationMessageStore? messageStore;
     private PersonVM model = new PersonVM();
-    
+
     private User newUser = new User();
     private List<Role> rolesList = new List<Role>();
     private List<SelectListItem> selectList = new List<SelectListItem>();
@@ -134,6 +165,7 @@
     {
         this.editContext = new EditContext(this.model);
         model.Sex = "Пол";
+        model.IdRole = "0";
         rolesList = new List<Role>()
         {
             new Role(){ RoleName="Admin", Id="1" },
@@ -163,40 +195,6 @@
             }
         }
     }
-    
-    private async void AddUserWithRole(EditContext context)
-    {
-        //var userModel = context.Model as User;
-
-        //var user = new IdentityUser { UserName = userModel.LoginName,
-        //                            Email = userModel.LoginName,
-        //                            EmailConfirmed = true};
-
-        //var messagePrompt = "Failed";
-
-        //var result = await this._userManager.CreateAsync(user, "Password123!");
-
-        //if(result.Succeeded)
-        //{
-        //        messagePrompt = "User was added ";   
-        //    var getRoleFromList = rolesList.FirstOrDefault(x => x.Id == userModel?.UserRole);
-        //    var roleAddedResult = await this._userManager.AddToRoleAsync(user, getRoleFromList?.RoleName ?? "User");
-
-        //    if (roleAddedResult.Succeeded)
-        //    {
-        //        messagePrompt += "Role was added ";   
-        //    }
-
-        //    var claimAddedResult = await this._userManager.AddClaimAsync(user, new Claim(getRoleFromList?.RoleName ?? "User", getRoleFromList.Id));
-
-        //    if (roleAddedResult.Succeeded)
-        //    {
-        //            messagePrompt += "Claim was added ";   
-        //    }
-
-        //}
-        //await this.JsRuntime.InvokeVoidAsync("alert", messagePrompt);
-    }
 
     private Task ModalCancel()
     {
@@ -214,6 +212,47 @@
 
         if (isValid)
         {
+            var userModel = this.model;
+
+            var user = new IdentityUser
+                {
+                    UserName = userModel.Email,
+                    Email = userModel.Email,
+                    EmailConfirmed = true,
+                    TwoFactorEnabled = true,
+                    PhoneNumber = ""
+                    
+                };
+
+            var messagePrompt = "Failed";
+
+            var result = await this._userManager.CreateAsync(user, "Password123!");
+
+            if (result.Succeeded)
+            {
+                messagePrompt = "User was added ";
+                var getRoleFromList = rolesList.FirstOrDefault(x => x.Id == userModel?.IdRole);
+                var roleAddedResult = await this._userManager.AddToRoleAsync(user, getRoleFromList?.RoleName ?? "User");
+
+                if (roleAddedResult.Succeeded)
+                {
+                    messagePrompt += "Role was added ";
+                }
+
+                var claimAddedResult = await this._userManager.AddClaimAsync(user, new Claim(getRoleFromList?.RoleName ?? "User", getRoleFromList.Id));
+
+                if (roleAddedResult.Succeeded)
+                {
+                    messagePrompt += "Claim was added ";
+                }
+
+            }
+            else
+            {    
+                await this.JsRuntime.InvokeVoidAsync("alert", "Невалиден имейл!");
+                this.StateHasChanged();
+                return;
+            }
             await OnSubmit.InvokeAsync(model);
             this.StateHasChanged();
         }

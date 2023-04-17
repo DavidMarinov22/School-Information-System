@@ -30,6 +30,9 @@ builder.Services.AddAuthorization(options =>
     
     options.AddPolicy("TeacherPolicy", policy =>
         policy.RequireClaim("Teacher"));
+
+    options.AddPolicy("UserPolicy", policy =>
+        policy.RequireClaim("User"));
 });
 
 

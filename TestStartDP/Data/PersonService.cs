@@ -62,7 +62,10 @@ namespace TestStartDP.Data
                     FamilyName = Person.FamilyName,
                     Indent = Person.Indent,
                     BirthDate = Person.BirthDate,
-                    Sex = Person.Sex
+                    Sex = Person.Sex,
+                    Email = Person.Email,
+                    IdRole = Person.IdRole,
+                    RoleName = Person.IdRole == "1" ? "Администратор" : Person.IdRole == "4" ? "Ученик" : Person.IdRole == "5" ? "Учител" : string.Empty
                 });
             }
             return dataVM.ToList();
@@ -79,7 +82,9 @@ namespace TestStartDP.Data
                 FamilyName = Person.FamilyName,
                 Indent = Person.Indent,
                 BirthDate = Person.BirthDate,
-                Sex = Person.Sex
+                Sex = Person.Sex,
+                Email = Person.Email,
+                IdRole = Person.IdRole
             };
         }
 
@@ -93,7 +98,9 @@ namespace TestStartDP.Data
                 FamilyName = Person.FamilyName,
                 Indent = Person.Indent,
                 BirthDate = Person.BirthDate.Value,
-                Sex = Person.Sex
+                Sex = Person.Sex,
+                Email = Person.Email,
+                IdRole = Person.IdRole
             };
         }
     }

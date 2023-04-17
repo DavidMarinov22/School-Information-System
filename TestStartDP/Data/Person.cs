@@ -11,15 +11,23 @@ namespace TestStartDP.Data
             public int IdPerson { get; set; }
 
             [Required]
+            public string IdRole { get; set; }
+
+            [Required]
             [StringLength(100)]
             public string FirstName { get; set; }
 
             [StringLength(100)]
-            public string SecondName { get; set; }
+            public string? SecondName { get; set; }
 
             [Required]
             [StringLength(100)]
             public string FamilyName { get; set; }
+
+            [Required]
+            [EmailAddress]
+            [StringLength(100)]
+            public string Email { get; set; }
 
             [StringLength(10)]
             public string Indent { get; set; }

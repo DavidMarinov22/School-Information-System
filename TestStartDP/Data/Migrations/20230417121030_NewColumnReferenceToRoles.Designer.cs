@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestStartDP.Data;
 
@@ -11,9 +12,10 @@ using TestStartDP.Data;
 namespace TestStartDP.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230417121030_NewColumnReferenceToRoles")]
+    partial class NewColumnReferenceToRoles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -250,9 +252,8 @@ namespace TestStartDP.Data.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("IdRole")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("IdRole")
+                        .HasColumnType("int");
 
                     b.Property<string>("Indent")
                         .IsRequired()
@@ -260,6 +261,7 @@ namespace TestStartDP.Data.Migrations
                         .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("SecondName")
+                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
