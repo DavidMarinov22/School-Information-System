@@ -5,7 +5,6 @@
 @inject IJSRuntime JsRuntime
 @inject IPersonService PersonService
 
-<h3>Потребители</h3>
 
 @*<select name="cars" id="cars">
     @foreach (var user in users)
@@ -19,8 +18,10 @@
 </select>*@
 <AuthorizeView Policy="AdminPolicy">
     <Authorized>
+    <div class="table-container">
+    <h2 class="table-heading">Потребители</h2>
         <button type="button" class="btn btn-primary" @onclick="OpenModal">Добави</button>
-        
+    
         <table class='table'>
         <thead>
             <tr>
@@ -44,13 +45,17 @@
             }
         </tbody>
     </table>
+    </div>
     </Authorized>
 </AuthorizeView>
 
 <AuthorizeView Policy="TeacherPolicy">
     <Authorized>
-        <button type="button" class="btn btn-primary" @onclick="OpenModal">Добави</button>
+        <div class="table-container">
+    <h2 class="table-heading">Потребители</h2>
 
+        <button type="button" class="btn btn-primary" @onclick="OpenModal">Добави</button>
+        
         <table class='table'>
         <thead>
             <tr>
@@ -72,12 +77,15 @@
             }
         </tbody>
     </table>
-
+    </div>
     </Authorized>
 </AuthorizeView>
 
 <AuthorizeView Policy="UserPolicy">
     <Authorized>
+        <div class="table-container">
+    <h2 class="table-heading">Потребители</h2>
+
         <table class='table'>
         <thead>
             <tr>
@@ -99,8 +107,73 @@
             }
         </tbody>
     </table>
+    </div>
     </Authorized>
 </AuthorizeView>
+
+<style>
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        background: linear-gradient(90deg, #0D324D, #7F5A83);
+        font-family: sans-serif;
+        font-weight: 100;
+    }
+    table {
+        border: 0;
+    }
+    .table-container {
+        padding: 32px;
+        font-family: "Roboto", sans-serif;
+    }
+
+        .table-container h2.table-heading {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 24px;
+            margin-bottom: 32px;
+            padding-bottom: 8px;
+        }
+        .table-container button {
+            margin-bottom: 10px;
+            margin-left: 25%;
+            background-color: #55608f;
+        }
+        .table-container button:hover {
+            
+            background-color: gray;
+        }
+
+        .table-container table {
+            width: 50%;
+            margin-left: 25%;
+            color: #222;
+            padding: 24px;
+            box-shadow: 0 4px 15px -8px rgba(0, 0, 0, 0.4);
+            border-collapse: collapse;
+        }
+
+            .table-container table thead tr {
+                background-color: #55608f;
+                color: white;
+                text-align: center;
+            }
+
+
+            .table-container table td,
+            .table-container table th {
+                padding: 15px;
+                background-color: rgba(255,255,255,0.2);
+                color: white;
+                text-align: center;
+                border: none;
+            }
+
+
+</style>
     @if(IsOpenUserModal)
     {
         <UsersModal Title="Добавяне на нов потребител" OnClose="CloseModal" OnSubmit="SaveAfterSubmit"></UsersModal>
