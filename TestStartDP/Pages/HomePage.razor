@@ -15,13 +15,15 @@
     <UsersModal Title="Нов потребител в системата" OnClose="CloseModal" OnSubmit="SaveAfterSubmit" User="user"></UsersModal>
 }
 <style>
+    body{
+         background-image: linear-gradient(rgba(0,8,51,0.9), rgba(0,8,51,0.9)), url(../images/background.jpg);
+        background-size: cover;
+    }
+
     h1{
         color: white;
     }
 
-body{
-    background-color: #354152;
-}
 </style>
 @code {
     [CascadingParameter] protected Task<AuthenticationState> AuthStat { get; set; }

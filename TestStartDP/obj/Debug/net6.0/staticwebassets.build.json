@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Wa+P187ufmAzkBm9ht2LXQVFTI9eTHXPswvKZyQkK3g=",
+  "Hash": "BU7ZMJoyBUk10/zAnDZ7Pk/PHaa8d9m3wcRaTnxsgoE=",
   "Source": "TestStartDP",
   "BasePath": "_content/TestStartDP",
   "Mode": "Default",
@@ -1290,6 +1290,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\dmarinov\\Desktop\\Project\\TestStartDP\\wwwroot\\images\\Background.jpg",
+      "SourceId": "TestStartDP",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dmarinov\\Desktop\\Project\\TestStartDP\\wwwroot\\",
+      "BasePath": "_content/TestStartDP",
+      "RelativePath": "images/Background.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Background.jpg"
     },
     {
       "Identity": "C:\\Users\\dmarinov\\Desktop\\Project\\TestStartDP\\wwwroot\\js\\Test.js",
