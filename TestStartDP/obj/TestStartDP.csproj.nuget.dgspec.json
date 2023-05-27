@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dmarinov\\Desktop\\Project\\TestStartDP\\TestStartDP.csproj": {}
+    "D:\\DAVID\\ДП\\TestStartDP\\TestStartDP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dmarinov\\Desktop\\Project\\TestStartDP\\TestStartDP.csproj": {
+    "D:\\DAVID\\ДП\\TestStartDP\\TestStartDP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dmarinov\\Desktop\\Project\\TestStartDP\\TestStartDP.csproj",
+        "projectUniqueName": "D:\\DAVID\\ДП\\TestStartDP\\TestStartDP.csproj",
         "projectName": "TestStartDP",
-        "projectPath": "C:\\Users\\dmarinov\\Desktop\\Project\\TestStartDP\\TestStartDP.csproj",
-        "packagesPath": "C:\\Users\\dmarinov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dmarinov\\Desktop\\Project\\TestStartDP\\obj\\",
+        "projectPath": "D:\\DAVID\\ДП\\TestStartDP\\TestStartDP.csproj",
+        "packagesPath": "C:\\Users\\Dimitar\\.nuget\\packages\\",
+        "outputPath": "D:\\DAVID\\ДП\\TestStartDP\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\dmarinov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Dimitar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -90,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
