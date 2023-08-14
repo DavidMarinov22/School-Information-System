@@ -64,15 +64,15 @@ namespace TestStartDP.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required(ErrorMessage = "Моля въведете имейл!")]
-            [EmailAddress(ErrorMessage = "Невалиден имейл!")]
+            [Required(ErrorMessage = "Please enter your password!")]
+            [EmailAddress(ErrorMessage = "Invalid email!")]
             public string Email { get; set; }
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required(ErrorMessage = "Моля въведете парола!")]
+            [Required(ErrorMessage = "Please enter your password!")]
             [DataType(DataType.Password)]
             public string Password { get; set; }
 
@@ -80,7 +80,7 @@ namespace TestStartDP.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Display(Name = "Запомни ме")]
+            [Display(Name = "Remember me")]
             public bool RememberMe { get; set; }
         }
 
@@ -128,7 +128,7 @@ namespace TestStartDP.Areas.Identity.Pages.Account
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Имейлът и паролата са невалидни.");
+                    ModelState.AddModelError(string.Empty, "Email or password is incorrect.");
                     return Page();
                 }
             }

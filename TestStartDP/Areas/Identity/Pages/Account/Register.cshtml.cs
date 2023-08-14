@@ -72,8 +72,8 @@ namespace TestStartDP.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required(ErrorMessage = "Моля въведете имейл!")]
-            [EmailAddress(ErrorMessage = "Невалиден имейл!")]
+            [Required(ErrorMessage = "Please eneter email!")]
+            [EmailAddress(ErrorMessage = "Invalid email!")]
             [Display(Name = "Email")]
             public string Email { get; set; }
 
@@ -81,8 +81,9 @@ namespace TestStartDP.Areas.Identity.Pages.Account
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
-            [Required(ErrorMessage = "Моля въведете парола!")]
-            [StringLength(100, ErrorMessage = "Паролата трябва да е поне 6 цифри!", MinimumLength = 6)]
+            [Required(ErrorMessage = "Please enter password!")]
+            [StringLength(100, ErrorMessage = "The password should be at least 6 characters long!", MinimumLength = 6)]
+
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
             public string Password { get; set; }
@@ -93,7 +94,7 @@ namespace TestStartDP.Areas.Identity.Pages.Account
             /// </summary>
             [DataType(DataType.Password)]
             [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "Паролата и паролата за потвърждение не си съвпадат!")]
+            [Compare("Password", ErrorMessage = "Confirm password doesn't match with password!")]
             public string ConfirmPassword { get; set; }
         }
 

@@ -1,0 +1,449 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\TestStartDP.bundle.scp.css",
+      "PackagePath": "staticwebassets\\TestStartDP.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\3D принтери.pptm",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\3D принтери.pptm"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\HDD SSD.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\HDD SSD.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\LED,OLED,QLED.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\LED,OLED,QLED.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Senzorni_displei.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Senzorni_displei.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Skeneri.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Skeneri.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\vhodni_periferni.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\vhodni_periferni.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\ВЗУ.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\ВЗУ.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Видео система.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Видео система.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Видове изходни периферни устройства.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Видове изходни периферни устройства.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Входни периферни устройства – клавиатури.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Входни периферни устройства – клавиатури.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Входни периферни устройства.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Входни периферни устройства.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Входни периферни устройства3.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Входни периферни устройства3.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Външни запомнящи устройства с магнитен метод на запис1.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Външни запомнящи устройства с магнитен метод на запис1.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Външни запомнящи устройства-класификация, физическа и логическа организация.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Външни запомнящи устройства-класификация, физическа и логическа организация.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Външни-запомнящи-устроиства.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Външни-запомнящи-устроиства.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Запомнящи устройства с оптичен метод на записване на.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Запомнящи устройства с оптичен метод на записване на.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Изх ПУ.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Изх ПУ.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Изходни ПУ (2).pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Изходни ПУ (2).pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Изходни ПУ.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Изходни ПУ.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Изходни периферни устройства. Принтери и плотери.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Изходни периферни устройства. Принтери и плотери.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\КЛАВИАТУРи.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\КЛАВИАТУРи.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Периферни .pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Периферни .pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Плотери - редактирано.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Плотери - редактирано.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Плотери-Валентин Терзиев.pptm",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Плотери-Валентин Терзиев.pptm"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Полупроводникови запомнящи устройства-SSD.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Полупроводникови запомнящи устройства-SSD.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Принтери (2).pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Принтери (2).pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия ЗПУ\\Принтери.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия ЗПУ\\Принтери.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КА\\32битови_Микропроцесори_презентация.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КА\\32битови_Микропроцесори_презентация.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КА\\Arhitektura na dunna platka V4.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КА\\Arhitektura na dunna platka V4.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КА\\Arkhitekturi_na_dnnite_platki.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КА\\Arkhitekturi_na_dnnite_platki.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КА\\Procesori_intel_amd.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КА\\Procesori_intel_amd.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КА\\RAM.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КА\\RAM.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КА\\ROM-BIOS (1).pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КА\\ROM-BIOS (1).pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КА\\komp_sys_hardware (1).ppt",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КА\\komp_sys_hardware (1).ppt"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КА\\urok1_tex_parametri.ppt",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КА\\urok1_tex_parametri.ppt"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КА\\urok2.ppt",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КА\\urok2.ppt"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КА\\Памети, видове архитектури, характеристики, инсталиране.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КА\\Памети, видове архитектури, характеристики, инсталиране.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КА\\Хибридни архитектури в съвременни дънни платки.odp",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КА\\Хибридни архитектури в съвременни дънни платки.odp"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КМ\\LAN - мрежи.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КМ\\LAN - мрежи.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КМ\\Lan мрежи.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КМ\\Lan мрежи.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КМ\\MAN мрежи.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КМ\\MAN мрежи.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КМ\\VPN характеристики и компоненти.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КМ\\VPN характеристики и компоненти.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КМ\\WAN..мрежи.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КМ\\WAN..мрежи.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КМ\\WAN.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КМ\\WAN.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КМ\\КМ и компоненти.odp",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КМ\\КМ и компоненти.odp"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КМ\\Компютърни мрежи.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КМ\\Компютърни мрежи.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КМ\\Мрежова среда и мрежови устройства.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КМ\\Мрежова среда и мрежови устройства.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КМ\\Мрежови архитектури и топологии.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КМ\\Мрежови архитектури и топологии.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КМ\\Оси модел архитектура и приложения.pptx - Даниел.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КМ\\Оси модел архитектура и приложения.pptx - Даниел.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия КМ\\Сървъри и конфигурации.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия КМ\\Сървъри и конфигурации.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Мултимедия Програмиране\\ОС.pptx",
+      "PackagePath": "staticwebassets\\Resource\\Мултимедия Програмиране\\ОС.pptx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни варианти ДКИ\\10_DKI_KTT.docx",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни варианти ДКИ\\10_DKI_KTT.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни варианти ДКИ\\11_DKI_KTT.docx",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни варианти ДКИ\\11_DKI_KTT.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни варианти ДКИ\\12_DKI_KTT.docx",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни варианти ДКИ\\12_DKI_KTT.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни варианти ДКИ\\13_DKI_KTT.docx",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни варианти ДКИ\\13_DKI_KTT.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни варианти ДКИ\\15_DKI_KTT.odt",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни варианти ДКИ\\15_DKI_KTT.odt"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни варианти ДКИ\\16_DKI_KTT.docx",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни варианти ДКИ\\16_DKI_KTT.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни варианти ДКИ\\17_DKI_KTT.docx",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни варианти ДКИ\\17_DKI_KTT.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни варианти ДКИ\\18_DKI_KTT.docx",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни варианти ДКИ\\18_DKI_KTT.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни варианти ДКИ\\1_DKI_KTT.odt",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни варианти ДКИ\\1_DKI_KTT.odt"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни варианти ДКИ\\2_DKI_KTT.odt",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни варианти ДКИ\\2_DKI_KTT.odt"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни варианти ДКИ\\3_DKI_KTT.docx",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни варианти ДКИ\\3_DKI_KTT.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни варианти ДКИ\\4_DKI_KTT.docx",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни варианти ДКИ\\4_DKI_KTT.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни варианти ДКИ\\5_DKI_KTT.docx",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни варианти ДКИ\\5_DKI_KTT.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни варианти ДКИ\\6_DKI_KTT.docx",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни варианти ДКИ\\6_DKI_KTT.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни варианти ДКИ\\7_DKI_KTT.docx",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни варианти ДКИ\\7_DKI_KTT.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни варианти ДКИ\\8_DKI_KTT.docx",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни варианти ДКИ\\8_DKI_KTT.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни варианти ДКИ\\9_DKI_KTT.docx",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни варианти ДКИ\\9_DKI_KTT.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни тестове ДКИ\\DKI_KTT_Zad.1.doc",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни тестове ДКИ\\DKI_KTT_Zad.1.doc"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни тестове ДКИ\\DKI_KTT_Zad.2.doc",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни тестове ДКИ\\DKI_KTT_Zad.2.doc"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни тестове ДКИ\\DKI_KTT_Zad.3.doc",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни тестове ДКИ\\DKI_KTT_Zad.3.doc"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни тестове ДКИ\\DKI_KTT_Zad.4.doc",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни тестове ДКИ\\DKI_KTT_Zad.4.doc"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни тестове ДКИ\\DKI_KTT_Zad.5.doc",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни тестове ДКИ\\DKI_KTT_Zad.5.doc"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Примерни изпитни тестове ДКИ\\DKI_KTT_Zad.6.doc",
+      "PackagePath": "staticwebassets\\Resource\\Примерни изпитни тестове ДКИ\\DKI_KTT_Zad.6.doc"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Тестове\\Test-КМ.pdf",
+      "PackagePath": "staticwebassets\\Resource\\Тестове\\Test-КМ.pdf"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Тестове\\ЗПУ\\ЗПУ Тест 1.doc",
+      "PackagePath": "staticwebassets\\Resource\\Тестове\\ЗПУ\\ЗПУ Тест 1.doc"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Тестове\\ЗПУ\\ЗПУ Тест 2.docx",
+      "PackagePath": "staticwebassets\\Resource\\Тестове\\ЗПУ\\ЗПУ Тест 2.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Тестове\\КА\\КА Тест 1.doc",
+      "PackagePath": "staticwebassets\\Resource\\Тестове\\КА\\КА Тест 1.doc"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Тестове\\КА\\КА Тест 2.doc",
+      "PackagePath": "staticwebassets\\Resource\\Тестове\\КА\\КА Тест 2.doc"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Тестове\\КА\\КА Тест 3.doc",
+      "PackagePath": "staticwebassets\\Resource\\Тестове\\КА\\КА Тест 3.doc"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Тестове\\КА\\КА Тест 4.doc",
+      "PackagePath": "staticwebassets\\Resource\\Тестове\\КА\\КА Тест 4.doc"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Тестове\\КА\\КА Тест 5.doc",
+      "PackagePath": "staticwebassets\\Resource\\Тестове\\КА\\КА Тест 5.doc"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Тестове\\КА\\КА Тест 6.doc",
+      "PackagePath": "staticwebassets\\Resource\\Тестове\\КА\\КА Тест 6.doc"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Тестове\\КМ\\КМ Тест 1.docx",
+      "PackagePath": "staticwebassets\\Resource\\Тестове\\КМ\\КМ Тест 1.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Тестове\\КМ\\КМ Тест 2.docx",
+      "PackagePath": "staticwebassets\\Resource\\Тестове\\КМ\\КМ Тест 2.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Тестове\\КМ\\КМ Тест 3.docx",
+      "PackagePath": "staticwebassets\\Resource\\Тестове\\КМ\\КМ Тест 3.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Тестове\\КМ\\КМ Тест 4.docx",
+      "PackagePath": "staticwebassets\\Resource\\Тестове\\КМ\\КМ Тест 4.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Тестове\\Програмиране\\Програмиране Тест 1.docx",
+      "PackagePath": "staticwebassets\\Resource\\Тестове\\Програмиране\\Програмиране Тест 1.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Тестове\\Програмиране\\Програмиране Тест 2.docx",
+      "PackagePath": "staticwebassets\\Resource\\Тестове\\Програмиране\\Програмиране Тест 2.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Тестове\\Програмиране\\Програмиране Тест 3.docx",
+      "PackagePath": "staticwebassets\\Resource\\Тестове\\Програмиране\\Програмиране Тест 3.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\Resource\\Тестове\\Програмиране\\Програмиране Тест 4.docx",
+      "PackagePath": "staticwebassets\\Resource\\Тестове\\Програмиране\\Програмиране Тест 4.docx"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\images\\Background.jpg",
+      "PackagePath": "staticwebassets\\images\\Background.jpg"
+    },
+    {
+      "Id": "D:\\CODES\\.NET Web application\\SchoolDiplomaProject\\TestStartDP\\wwwroot\\js\\Test.js",
+      "PackagePath": "staticwebassets\\js\\Test.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.TestStartDP.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.TestStartDP.props",
+      "PackagePath": "build\\TestStartDP.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.TestStartDP.props",
+      "PackagePath": "buildMultiTargeting\\TestStartDP.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.TestStartDP.props",
+      "PackagePath": "buildTransitive\\TestStartDP.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

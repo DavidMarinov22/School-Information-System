@@ -5,188 +5,189 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TestStartDP
 build_property.RootNamespace = TestStartDP
-build_property.ProjectDir = D:\DAVID\ДП\TestStartDP\
+build_property.ProjectDir = D:\CODES\.NET Web application\SchoolDiplomaProject\TestStartDP\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\DAVID\ДП\TestStartDP
+build_property.MSBuildProjectDirectory = D:\CODES\.NET Web application\SchoolDiplomaProject\TestStartDP
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/DAVID/ДП/TestStartDP/App.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/HomePage.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/HomePage.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZVBhZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/Index.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/Multimedia/ComputerArchitecture.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/Multimedia/ComputerArchitecture.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXVsdGltZWRpYVxDb21wdXRlckFyY2hpdGVjdHVyZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/Multimedia/ComputerNetwork.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/Multimedia/ComputerNetwork.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXVsdGltZWRpYVxDb21wdXRlck5ldHdvcmsucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/Multimedia/Programming.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/Multimedia/Programming.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXVsdGltZWRpYVxQcm9ncmFtbWluZy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/Multimedia/ZPU.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/Multimedia/ZPU.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXVsdGltZWRpYVxaUFUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/StudyMaterials/ExamOptions.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/StudyMaterials/ExamOptions.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZHlNYXRlcmlhbHNcRXhhbU9wdGlvbnMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/StudyMaterials/ExamTests.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/StudyMaterials/ExamTests.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZHlNYXRlcmlhbHNcRXhhbVRlc3RzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/Tests/ComputerArchitectureTests.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/Tests/ComputerArchitectureTests.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdHNcQ29tcHV0ZXJBcmNoaXRlY3R1cmVUZXN0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/Tests/ComputerNetworkTests.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/Tests/ComputerNetworkTests.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdHNcQ29tcHV0ZXJOZXR3b3JrVGVzdHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/Tests/ProgrammingTests.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/Tests/ProgrammingTests.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdHNcUHJvZ3JhbW1pbmdUZXN0cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/Tests/ZPUTests.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/Tests/ZPUTests.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdHNcWlBVVGVzdHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/UsersList.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/UsersList.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/UsersModal.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/UsersModal.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnNNb2RhbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Shared/LoginDisplay.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Shared/LoginDisplay.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luRGlzcGxheS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Shared/SurveyPrompt.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/_Imports.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Shared/MainLayout.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-oyvc2xrx86
 
-[D:/DAVID/ДП/TestStartDP/Shared/NavMenu.razor]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-z8s7brk5n1
 
-[D:/DAVID/ДП/TestStartDP/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Areas/Identity/Pages/Account/Lockout.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Areas/Identity/Pages/Account/Lockout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2Nrb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Areas/Identity/Pages/Account/Login.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Areas/Identity/Pages/Account/LogOut.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Areas/Identity/Pages/Account/LogOut.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dPdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Areas/Identity/Pages/Account/Manage/Email.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Areas/Identity/Pages/Account/Manage/Email.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcU2V0UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Areas/Identity/Pages/Account/Register.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Areas/Identity/Pages/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkQ29uZmlybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Areas/Identity/Pages/Account/UpdatePassword.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Areas/Identity/Pages/Account/UpdatePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxVcGRhdGVQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Areas/Identity/Pages/Shared/_LoginPartial.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Areas/Identity/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Areas/Identity/Pages/_ViewImports.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Areas/Identity/Pages/_ViewStart.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/Error.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/Shared/_Layout.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/Shared/_LoginPartial.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/_Host.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/_Layout.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DAVID/ДП/TestStartDP/Pages/_ViewImports.cshtml]
+[D:/CODES/.NET Web application/SchoolDiplomaProject/TestStartDP/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

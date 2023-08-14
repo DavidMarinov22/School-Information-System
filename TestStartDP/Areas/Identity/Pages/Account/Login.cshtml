@@ -6,19 +6,19 @@
         <div class="register">
             
             <img src="https://spge-bg.com/wp-content/uploads/2017/05/LogoSPGEwebTr.png" alt="СПГЕ &quot;Джон Атанасов&quot;" width="50" height="50">
-            <span class="headerText">СОФИЙСКА ПРОФЕСИОНАЛНА ГИМНАЗИЯ ПО ЕЛЕКТРОНИКА „ДЖОН АТАНАСОВ“</span>
-            
-            <h2>Вход</h2>
+            <span class="headerText">SOFIA VOCATIONAL HIGH SCHOOL OF ELECTRONICS "JOHN ATANASSOV"</span>
+             
+            <h2>Sign in</h2>
             <form id="account" method="post" class="form">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                 <div class="form form-field">
-                    <input asp-for="Input.Email" class="username" placeholder="Имейл" style="margin-bottom:5px" autocomplete="username" aria-required="true" />
+                    <input asp-for="Input.Email" class="username" placeholder="Email" style="margin-bottom:5px" autocomplete="username" aria-required="true" />
                     <br />
                     <span asp-validation-for="Input.Email" class="text-danger"></span>
                 </div>
                 <div class="form form-field">
-                    <input asp-for="Input.Password" class="pass" placeholder="Парола" style="margin-bottom:5px" autocomplete="current-password" aria-required="true" />
+                    <input asp-for="Input.Password" class="pass" placeholder="Password" style="margin-bottom:5px" autocomplete="current-password" aria-required="true" />
                     <div style="text-align:left;">
                         <div class="checkbox" style="margin-left: 10%;">
                             <label asp-for="Input.RememberMe"  class="form-label">
@@ -26,7 +26,7 @@
                                 @Html.DisplayNameFor(m => m.Input.RememberMe)
                             </label>
 
-                            <a id="forgot-password" class="form-label" style="margin-left: 20%" href="/UpdatePassword">Забравена парола</a>
+                            <a id="forgot-password" class="form-label" style="margin-left: 20%" href="/UpdatePassword">Forget password?</a>
                         </div>
                     </div>
                     <br />
@@ -34,7 +34,7 @@
                 </div>
                 
                 <div>
-                    <button id="login-submit" type="submit" class="button button2">ВХОД</button>
+                    <button id="login-submit" type="submit" class="button button2">SIGN IN</button>
                 </div>
                 
             </form>
